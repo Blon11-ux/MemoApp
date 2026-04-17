@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Memo App</title>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="main">
+        <form action="/memos" method="POST">
+        <input type="text" name="content" required placeholder="メモを入力してください">
+        <button type="submit">Add</button>
+    </form>
+
+    <ul>
+        <% if (memos.length === 0) { %>
+            <li>メモがありません</li>
+        <% } else { %>
+            <% memos.forEach(memo => { %>
+                <li>
+                    <%= memo.content %>
+                    (<%= new Date(memo.createdAt).toLocaleString() %>)
+                    <form action="/memos/delete/<%= memo.id %>" method="POST" style="display:inline;">
+                        <button type="submit">Delete</button>
+                    </form>
+                </li>
+            <% }) %>
+        <% } %>
+    </ul>
+    </div>
+
+    <%- include('partials/footer') %>
+</body>
+</html>
