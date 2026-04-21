@@ -79,9 +79,7 @@ nav {
     width: 100%;
 }
 
-/* =========================================
-   FORM ELEMENTS
-   ========================================= */
+
 button {
     padding: 10px 16px;
     border-radius: 6px;
@@ -117,9 +115,7 @@ input::placeholder {
     color: #64748b;
 }
 
-/* =========================================
-   MAIN CONTENT
-   ========================================= */
+
 .main {
     padding: 24px;
     margin: 40px auto;
@@ -132,9 +128,7 @@ input::placeholder {
     border-radius: 8px;
 }
 
-/* =========================================
-   MEMO LIST
-   ========================================= */
+
 .main ul {
     list-style: none;
     margin-top: 16px;
