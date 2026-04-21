@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    background-color: #0f172a;
+    background: radial-gradient(ellipse at center, #1e1b4b 0%, #0f172a 60%, #0f172a 100%);
     color: #f1f5f9;
     line-height: 1.6;
     overflow-x: hidden;
